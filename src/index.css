@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modal overlay fix - Ensure all modals cover the entire screen */
+.modal-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 9998 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal-content {
+  z-index: 9999 !important;
+}
+
+/* Prevent body scroll when modal is open */
+.modal-open {
+  overflow: hidden !important;
+}
+
+/* Professional Dashboard Theme */
+:root {
+  /* Modern SaaS Colors */
+  --dashboard-primary: #1e40af;
+  --dashboard-secondary: #64748b;
+  --dashboard-accent: #06b6d4;
+  --dashboard-success: #10b981;
+  --dashboard-warning: #f59e0b;
+  --dashboard-danger: #ef4444;
+  --dashboard-neutral-50: #f8fafc;
+  --dashboard-neutral-100: #f1f5f9;
+  --dashboard-neutral-200: #e2e8f0;
+  --dashboard-neutral-300: #cbd5e1;
+  --dashboard-neutral-400: #94a3b8;
+  --dashboard-neutral-500: #64748b;
+  --dashboard-neutral-600: #475569;
+  --dashboard-neutral-700: #334155;
+  --dashboard-neutral-800: #1e293b;
+  --dashboard-neutral-900: #0f172a;
+  
+  /* Chart Colors */
+  --chart-primary: #3b82f6;
+  --chart-secondary: #8b5cf6;
+  --chart-tertiary: #06b6d4;
+  --chart-quaternary: #10b981;
+  --chart-quinary: #f59e0b;
+}
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Professional Container System */
+.dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--dashboard-neutral-50);
+  min-height: 100vh;
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--dashboard-neutral-200);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+.dashboard-card-header {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.dashboard-card-content {
+  padding: 1.5rem;
+}
+
+/* KPI Cards */
+.kpi-card {
+  @apply dashboard-card;
+  position: relative;
+  overflow: hidden;
+  grid-column: span 3;
+}
+
+@media (max-width: 1024px) {
+  .kpi-card {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 640px) {
+  .kpi-card {
+    grid-column: span 12;
+  }
+}
+
+.kpi-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.kpi-value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--dashboard-neutral-900);
+  margin-bottom: 0.25rem;
+}
+
+.kpi-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--dashboard-neutral-600);
+  margin-bottom: 0.5rem;
+}
+
+.kpi-trend {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.kpi-trend.positive {
+  color: var(--dashboard-success);
+}
+
+.kpi-trend.negative {
+  color: var(--dashboard-danger);
+}
+
+.kpi-trend.neutral {
+  color: var(--dashboard-neutral-500);
+}
+
+/* Chart Containers */
+.chart-container {
+  @apply dashboard-card;
+  min-height: 400px;
+}
+
+.chart-container.large {
+  grid-column: span 8;
+}
+
+.chart-container.medium {
+  grid-column: span 4;
+}
+
+.chart-container.full {
+  grid-column: span 12;
+}
+
+@media (max-width: 1024px) {
+  .chart-container.large,
+  .chart-container.medium {
+    grid-column: span 12;
+  }
+}
+
+/* Header Styles */
+.dashboard-header {
+  background: white;
+  border-bottom: 1px solid var(--dashboard-neutral-200);
+  padding: 1.5rem 2rem;
+  margin: -2rem -2rem 2rem -2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--dashboard-neutral-900);
+  margin: 0;
+}
+
+.dashboard-subtitle {
+  font-size: 1rem;
+  color: var(--dashboard-neutral-600);
+  margin: 0.25rem 0 0 0;
+}
+
+/* Period Toggle */
+.period-toggle {
+  display: flex;
+  background: var(--dashboard-neutral-100);
+  border-radius: 8px;
+  padding: 4px;
+  gap: 2px;
+  align-items: center;
+}
+
+.period-button {
+  padding: 0.625rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  color: var(--dashboard-neutral-600);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.period-button.active {
+  background: white;
+  color: var(--dashboard-primary);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.period-button:hover:not(.active) {
+  color: var(--dashboard-neutral-800);
+}
+
+/* Loading States */
+.skeleton {
+  background: linear-gradient(90deg, var(--dashboard-neutral-200) 25%, var(--dashboard-neutral-100) 50%, var(--dashboard-neutral-200) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Responsive Grid */
+@media (max-width: 640px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+  
+  .dashboard-grid {
+    gap: 1rem;
+  }
+}
+
+/* University Scholarship Platform Design System */
+
+@layer base {
+  :root {
+    /* Core university colors */
+    --background: 0 0% 100%;
+    --foreground: 225 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 225 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 15% 15%;
+
+    /* University brand colors */
+    --primary: 214 84% 20%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 214 84% 35%;
+
+    /* Academic accent colors */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 225 15% 15%;
+
+    --accent: 45 93% 47%;
+    --accent-foreground: 0 0% 98%;
+    --accent-glow: 45 93% 60%;
+
+    /* Muted academic tones */
+    --muted: 210 20% 96%;
+    --muted-foreground: 225 8% 45%;
+
+    /* Status colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Interface elements */
+    --border: 214 20% 90%;
+    --input: 214 20% 95%;
+    --ring: 214 84% 20%;
+
+    --radius: 0.75rem;
+
+    /* University gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 50%, hsl(var(--accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(0 0% 100% / 0.4));
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px hsl(var(--primary) / 0.08);
+    --shadow-md: 0 4px 12px hsl(var(--primary) / 0.12);
+    --shadow-lg: 0 8px 25px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 20px hsl(var(--accent) / 0.3);
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Scoped Tapin theme: only applies inside elements with .tapin-theme */
+  .tapin-theme {
+    /* Tapin-like vivid blue/purple brand */
+    --primary: 224 86% 55%; /* blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 268 84% 58%; /* purple */
+
+    --accent: 210 100% 52%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 210 100% 60%;
+
+    --background: 0 0% 100%;
+    --foreground: 222 15% 15%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(224 86% 55%), hsl(268 84% 58%));
+    --gradient-accent: linear-gradient(135deg, hsl(210 100% 52%), hsl(210 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(224 86% 55%) 0%, hsl(268 84% 58%) 70%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8), hsl(0 0% 100% / 0.4));
+  }
+
+  /* Scoped UDD Admin theme */
+  .udd-theme {
+    /* UDD blue + white */
+    --primary: 214 83% 32%; /* deep UDD blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 214 83% 46%;
+
+    --accent: 0 0% 100%; /* white accent */
+    --accent-foreground: 214 83% 32%;
+    --accent-glow: 214 83% 90%;
+
+    --background: 210 40% 98%;
+    --foreground: 222 15% 15%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(214 83% 32%), hsl(214 83% 46%));
+    --gradient-accent: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 100%));
+    --gradient-hero: linear-gradient(135deg, hsl(214 83% 32%) 0%, hsl(214 83% 46%) 70%);
+
+    /* UDD Sidebar styling - blue background with white text */
+    --sidebar-background: 214 83% 32%; /* UDD blue background */
+    --sidebar-foreground: 0 0% 100%; /* white text */
+    --sidebar-primary: 214 83% 32%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 100% / 0.1; /* subtle white overlay for hover */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100% / 0.1;
+    --sidebar-ring: 0 0% 100%;
+  }
+
+  .dark {
+    /* Dark mode university colors */
+    --background: 225 25% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 225 20% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 225 20% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 214 84% 65%;
+    --primary-foreground: 225 25% 8%;
+    --primary-glow: 214 84% 75%;
+
+    --secondary: 225 15% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --accent: 45 93% 58%;
+    --accent-foreground: 225 25% 8%;
+    --accent-glow: 45 93% 68%;
+
+    --muted: 225 15% 15%;
+    --muted-foreground: 225 8% 65%;
+
+    --success: 142 76% 45%;
+    --warning: 38 92% 60%;
+    --destructive: 0 84% 65%;
+
+    --border: 225 15% 20%;
+    --input: 225 15% 18%;
+    --ring: 214 84% 65%;
+
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 50%, hsl(var(--accent)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(225 20% 15% / 0.8), hsl(225 20% 12% / 0.4));
+
+    --sidebar-background: 225 20% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 214 84% 65%;
+    --sidebar-primary-foreground: 225 25% 8%;
+    --sidebar-accent: 225 15% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 225 15% 18%;
+    --sidebar-ring: 214 84% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  /* Prevent layout shift when vertical scrollbar appears/disappears */
+  .scrollbar-stable {
+    scrollbar-gutter: stable both-edges;
+    overflow-y: auto;
+  }
+  
+  /* Force consistent scrollbar behavior across tabs */
+  .tab-scroll-consistent {
+    min-height: calc(100vh - 16rem);
+    overflow-y: auto;
+  }
+  
+  /* Standard card title format for consistency
+   * 
+   * TITLE FORMAT:
+   * <CardTitle className="text-gradient-primary flex items-center space-x-2">
+   *   <Icon className="h-5 w-5" />
+   *   <span>Title Text</span>
+   * </CardTitle>
+   * 
+   * SPACING FORMAT:
+   * - For simple headers: <CardHeader className="space-y-2">
+   * - For complex headers: wrap title/description in <div className="space-y-2">
+   * 
+   * DATE FORMAT:
+   * Always use formatDate() function for user-readable dates:
+   * formatDate("2025-01-16") → "16 de enero de 2025"
+   * 
+   * This ensures consistent 8px spacing between blue title and gray subtitle
+   */
+  
+
+  .text-gradient-primary {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+    /* Fix for gradient clipping issues */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 0.1em 0; /* Add small padding to prevent clipping */
+    line-height: 1.2; /* Ensure adequate line height */
+  }
+  
+  .text-gradient-accent {
+    @apply bg-gradient-accent bg-clip-text text-transparent;
+    /* Fix for gradient clipping issues */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding: 0.1em 0; /* Add small padding to prevent clipping */
+    line-height: 1.2; /* Ensure adequate line height */
+  }
+
+  /* Special spacing for card titles with descriptions */
+  .card-title-with-description {
+    margin-bottom: 0.5rem; /* 8px spacing between title and description */
+  }
+  
+  .shadow-university {
+    box-shadow: var(--shadow-md);
+  }
+  
+  .shadow-glow-accent {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-university {
+    transition: var(--transition-smooth);
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

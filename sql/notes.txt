@@ -1,0 +1,10 @@
+Supabase setup quick notes
+
+1) Ejecutar create_tables.sql en el SQL editor de Supabase.
+2) Importar datos desde db.json con una herramienta (ej. script Node) o CSVs.
+3) Obtener Project URL y anon key (Settings -> API) y poner en .env:
+   VITE_SUPABASE_URL=...
+   VITE_SUPABASE_ANON_KEY=...
+
+Opcional: habilitar RLS y políticas según necesidad.
+

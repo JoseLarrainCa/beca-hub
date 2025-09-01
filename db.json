@@ -1,0 +1,1233 @@
+
+{
+  "wallets": [
+    {
+      "id": "E2021-12345",
+      "name": "María González Pérez",
+      "email": "maria.gonzalez@universidad.cl",
+      "balance": 1150,
+      "status": "active",
+      "validFrom": "2025-01-01",
+      "validUntil": "2025-06-30",
+      "lastTransaction": "2025-08-27T06:33:56.213Z",
+      "limitPerPurchase": 15000
+    },
+    {
+      "id": "E2021-67890",
+      "name": "Carlos Rodríguez Silva",
+      "email": "carlos.rodriguez@universidad.cl",
+      "balance": 37800,
+      "status": "active",
+      "validFrom": "2025-01-01",
+      "validUntil": "2025-06-30",
+      "lastTransaction": "2025-08-27T06:09:10.356Z",
+      "limitPerPurchase": 20000
+    },
+    {
+      "id": "E2021-11111",
+      "name": "Ana Martínez López",
+      "email": "ana.martinez@universidad.cl",
+      "balance": 8500,
+      "status": "suspended",
+      "validFrom": "2025-01-01",
+      "validUntil": "2025-06-30",
+      "lastTransaction": "2024-12-30 14:20",
+      "limitPerPurchase": 12000
+    },
+    {
+      "id": "E2022-33445",
+      "name": "Diego Fernández Castro",
+      "email": "diego.fernandez@universidad.cl",
+      "balance": 28500,
+      "status": "active",
+      "validFrom": "2025-01-01",
+      "validUntil": "2025-06-30",
+      "lastTransaction": "2024-12-26T16:30:00Z",
+      "limitPerPurchase": 18000
+    },
+    {
+      "id": "E2022-55667",
+      "name": "Valentina Torres Mendoza",
+      "email": "valentina.torres@universidad.cl",
+      "balance": 32100,
+      "status": "active",
+      "validFrom": "2025-01-01",
+      "validUntil": "2025-06-30",
+      "lastTransaction": "2024-12-26T14:15:00Z",
+      "limitPerPurchase": 16000
+    },
+    {
+      "id": "E2023-77889",
+      "name": "Sebastián Morales Vega",
+      "email": "sebastian.morales@universidad.cl",
+      "balance": 19800,
+      "status": "active",
+      "validFrom": "2025-01-01",
+      "validUntil": "2025-06-30",
+      "lastTransaction": "2024-12-26T12:45:00Z",
+      "limitPerPurchase": 14000
+    },
+    {
+      "id": "E2023-99001",
+      "name": "Camila Herrera Soto",
+      "email": "camila.herrera@universidad.cl",
+      "balance": 25700,
+      "status": "active",
+      "validFrom": "2025-01-01",
+      "validUntil": "2025-06-30",
+      "lastTransaction": "2024-12-26T11:20:00Z",
+      "limitPerPurchase": 17000
+    },
+    {
+      "id": "E2023-22334",
+      "name": "Joaquín Silva Ramírez",
+      "email": "joaquin.silva@universidad.cl",
+      "balance": 14200,
+      "status": "active",
+      "validFrom": "2025-01-01",
+      "validUntil": "2025-06-30",
+      "lastTransaction": "2024-12-25T18:30:00Z",
+      "limitPerPurchase": 13000
+    },
+    {
+      "id": "E2024-44556",
+      "name": "Isabella Rojas Muñoz",
+      "email": "isabella.rojas@universidad.cl",
+      "balance": 37500,
+      "status": "active",
+      "validFrom": "2025-01-01",
+      "validUntil": "2025-06-30",
+      "lastTransaction": "2024-12-25T17:10:00Z",
+      "limitPerPurchase": 19000
+    },
+    {
+      "id": "E2024-66778",
+      "name": "Matías Guerrero Flores",
+      "email": "matias.guerrero@universidad.cl",
+      "balance": 21400,
+      "status": "active",
+      "validFrom": "2025-01-01",
+      "validUntil": "2025-06-30",
+      "lastTransaction": "2024-12-25T15:45:00Z",
+      "limitPerPurchase": 15000
+    }
+  ],
+  "transactions": [
+    {
+      "id": "txn-001",
+      "studentId": "E2021-12345",
+      "date": "2024-12-15T12:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Café Americano, 1x Sandwich Italiano",
+      "amount": -5000,
+      "balanceAfter": 25750,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-001"
+    },
+    {
+      "id": "txn-002",
+      "studentId": "E2021-67890",
+      "date": "2024-12-14T18:45:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar, 1x Agua Mineral",
+      "amount": -5700,
+      "balanceAfter": 42300,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-002"
+    },
+    {
+      "id": "txn-003",
+      "studentId": "E2021-12345",
+      "date": "2024-12-10T14:30:00Z",
+      "type": "adjustment",
+      "description": "Carga de beca mensual",
+      "amount": 25000,
+      "balanceAfter": 28250,
+      "reason": "Asignación mensual de beca alimentaria"
+    },
+    {
+      "id": "txn-004",
+      "studentId": "E2022-33445",
+      "date": "2024-12-26T16:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Hamburguesa Completa, 1x Papas Fritas",
+      "amount": -6400,
+      "balanceAfter": 28500,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-003"
+    },
+    {
+      "id": "txn-005",
+      "studentId": "E2022-55667",
+      "date": "2024-12-26T14:15:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 2x Empanada de Pino, 1x Jugo Natural",
+      "amount": -6500,
+      "balanceAfter": 32100,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-004"
+    },
+    {
+      "id": "txn-006",
+      "studentId": "E2023-77889",
+      "date": "2024-12-26T12:45:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Pasta Bolognesa",
+      "amount": -5500,
+      "balanceAfter": 19800,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-005"
+    },
+    {
+      "id": "txn-007",
+      "studentId": "E2023-99001",
+      "date": "2024-12-26T11:20:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Café Americano, 1x Empanada de Pino",
+      "amount": -3500,
+      "balanceAfter": 25700,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-006"
+    },
+    {
+      "id": "txn-008",
+      "studentId": "E2023-22334",
+      "date": "2024-12-25T18:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Hamburguesa Completa, 1x Bebida 500ml",
+      "amount": -6000,
+      "balanceAfter": 14200,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-007"
+    },
+    {
+      "id": "txn-009",
+      "studentId": "E2024-44556",
+      "date": "2024-12-25T17:10:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar, 1x Pasta Bolognesa",
+      "amount": -10000,
+      "balanceAfter": 37500,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-008"
+    },
+    {
+      "id": "txn-010",
+      "studentId": "E2024-66778",
+      "date": "2024-12-25T15:45:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Sandwich Italiano, 1x Jugo Natural",
+      "amount": -6000,
+      "balanceAfter": 21400,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-009"
+    },
+    {
+      "id": "txn-011",
+      "studentId": "E2021-67890",
+      "date": "2024-12-25T14:20:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 2x Hamburguesa Completa",
+      "amount": -8400,
+      "balanceAfter": 50700,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-010"
+    },
+    {
+      "id": "txn-012",
+      "studentId": "E2022-33445",
+      "date": "2024-12-25T13:15:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Café Americano, 2x Empanada de Pino",
+      "amount": -5500,
+      "balanceAfter": 34900,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-011"
+    },
+    {
+      "id": "txn-013",
+      "studentId": "E2022-55667",
+      "date": "2024-12-25T12:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar, 1x Agua Mineral",
+      "amount": -5700,
+      "balanceAfter": 38600,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-012"
+    },
+    {
+      "id": "txn-014",
+      "studentId": "E2023-77889",
+      "date": "2024-12-24T16:45:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Papas Fritas, 1x Bebida 500ml",
+      "amount": -4000,
+      "balanceAfter": 25300,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-013"
+    },
+    {
+      "id": "txn-015",
+      "studentId": "E2023-99001",
+      "date": "2024-12-24T15:20:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Sandwich Italiano",
+      "amount": -3500,
+      "balanceAfter": 29200,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-014"
+    },
+    {
+      "id": "txn-016",
+      "studentId": "E2023-22334",
+      "date": "2024-12-24T14:10:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Pasta Bolognesa, 1x Agua Mineral",
+      "amount": -6700,
+      "balanceAfter": 20200,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-015"
+    },
+    {
+      "id": "txn-017",
+      "studentId": "E2024-44556",
+      "date": "2024-12-24T13:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Hamburguesa Completa, 1x Papas Fritas, 1x Bebida 500ml",
+      "amount": -8400,
+      "balanceAfter": 47500,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-016"
+    },
+    {
+      "id": "txn-018",
+      "studentId": "E2024-66778",
+      "date": "2024-12-24T12:15:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 2x Café Americano, 1x Empanada de Pino",
+      "amount": -5000,
+      "balanceAfter": 27400,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-017"
+    },
+    {
+      "id": "txn-019",
+      "studentId": "E2021-12345",
+      "date": "2024-12-24T11:45:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar",
+      "amount": -4500,
+      "balanceAfter": 30750,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-018"
+    },
+    {
+      "id": "txn-020",
+      "studentId": "E2021-67890",
+      "date": "2024-12-23T18:20:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 2x Hamburguesa Completa, 1x Papas Fritas",
+      "amount": -10600,
+      "balanceAfter": 59100,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-019"
+    },
+    {
+      "id": "txn-021",
+      "studentId": "E2022-33445",
+      "date": "2024-12-23T17:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Café Americano, 1x Sandwich Italiano, 1x Jugo Natural",
+      "amount": -7500,
+      "balanceAfter": 40400,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-020"
+    },
+    {
+      "id": "txn-022",
+      "studentId": "E2022-55667",
+      "date": "2024-12-23T16:15:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Pasta Bolognesa, 1x Ensalada Caesar",
+      "amount": -10000,
+      "balanceAfter": 44300,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-021"
+    },
+    {
+      "id": "txn-023",
+      "studentId": "E2023-77889",
+      "date": "2024-12-23T15:40:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Hamburguesa Completa",
+      "amount": -4200,
+      "balanceAfter": 29300,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-022"
+    },
+    {
+      "id": "txn-024",
+      "studentId": "E2023-99001",
+      "date": "2024-12-23T14:25:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 2x Empanada de Pino, 1x Café Americano",
+      "amount": -5500,
+      "balanceAfter": 32700,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-023"
+    },
+    {
+      "id": "txn-025",
+      "studentId": "E2023-22334",
+      "date": "2024-12-23T13:50:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar, 1x Agua Mineral",
+      "amount": -5700,
+      "balanceAfter": 26900,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-024"
+    },
+    {
+      "id": "txn-026",
+      "studentId": "E2024-44556",
+      "date": "2024-12-23T12:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Papas Fritas, 2x Bebida 500ml",
+      "amount": -5800,
+      "balanceAfter": 55900,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-025"
+    },
+    {
+      "id": "txn-027",
+      "studentId": "E2024-66778",
+      "date": "2024-12-22T17:45:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Sandwich Italiano, 1x Empanada de Pino",
+      "amount": -5500,
+      "balanceAfter": 32400,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-026"
+    },
+    {
+      "id": "txn-028",
+      "studentId": "E2021-12345",
+      "date": "2024-12-22T16:20:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Pasta Bolognesa",
+      "amount": -5500,
+      "balanceAfter": 35250,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-027"
+    },
+    {
+      "id": "txn-029",
+      "studentId": "E2021-67890",
+      "date": "2024-12-22T15:10:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Hamburguesa Completa, 1x Bebida 500ml",
+      "amount": -6000,
+      "balanceAfter": 69700,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-028"
+    },
+    {
+      "id": "txn-030",
+      "studentId": "E2022-33445",
+      "date": "2024-12-22T14:35:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 2x Café Americano, 1x Jugo Natural",
+      "amount": -5500,
+      "balanceAfter": 47900,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-029"
+    },
+    {
+      "id": "txn-031",
+      "studentId": "E2022-55667",
+      "date": "2024-12-21T18:20:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar, 1x Pasta Bolognesa, 1x Agua Mineral",
+      "amount": -11200,
+      "balanceAfter": 54300,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-030"
+    },
+    {
+      "id": "txn-032",
+      "studentId": "E2023-77889",
+      "date": "2024-12-21T17:15:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 2x Hamburguesa Completa, 2x Papas Fritas",
+      "amount": -12800,
+      "balanceAfter": 33500,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-031"
+    },
+    {
+      "id": "txn-033",
+      "studentId": "E2023-99001",
+      "date": "2024-12-21T16:40:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Sandwich Italiano, 2x Empanada de Pino",
+      "amount": -7500,
+      "balanceAfter": 38200,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-032"
+    },
+    {
+      "id": "txn-034",
+      "studentId": "E2023-22334",
+      "date": "2024-12-21T15:25:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Pasta Bolognesa, 1x Agua Mineral",
+      "amount": -6700,
+      "balanceAfter": 32600,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-033"
+    },
+    {
+      "id": "txn-035",
+      "studentId": "E2024-44556",
+      "date": "2024-12-21T14:50:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Hamburguesa Completa, 1x Papas Fritas, 2x Bebida 500ml",
+      "amount": -10000,
+      "balanceAfter": 61700,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-034"
+    },
+    {
+      "id": "txn-036",
+      "studentId": "E2024-66778",
+      "date": "2024-12-21T13:15:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 2x Café Americano, 1x Sandwich Italiano",
+      "amount": -6500,
+      "balanceAfter": 37900,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-035"
+    },
+    {
+      "id": "txn-037",
+      "studentId": "E2021-12345",
+      "date": "2024-12-21T12:40:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar, 1x Agua Mineral",
+      "amount": -5700,
+      "balanceAfter": 40750,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-036"
+    },
+    {
+      "id": "txn-038",
+      "studentId": "E2021-67890",
+      "date": "2024-12-20T18:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 3x Hamburguesa Completa",
+      "amount": -12600,
+      "balanceAfter": 75700,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-037"
+    },
+    {
+      "id": "txn-039",
+      "studentId": "E2022-33445",
+      "date": "2024-12-20T17:20:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Café Americano, 1x Empanada de Pino, 1x Jugo Natural",
+      "amount": -6000,
+      "balanceAfter": 53400,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-038"
+    },
+    {
+      "id": "txn-040",
+      "studentId": "E2022-55667",
+      "date": "2024-12-20T16:45:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 2x Pasta Bolognesa",
+      "amount": -11000,
+      "balanceAfter": 65500,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-039"
+    },
+    {
+      "id": "txn-041",
+      "studentId": "E2023-77889",
+      "date": "2024-12-20T15:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Papas Fritas, 1x Bebida 500ml",
+      "amount": -4000,
+      "balanceAfter": 46300,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-040"
+    },
+    {
+      "id": "txn-042",
+      "studentId": "E2023-99001",
+      "date": "2024-12-20T14:55:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Sandwich Italiano, 1x Café Americano",
+      "amount": -5000,
+      "balanceAfter": 45700,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-041"
+    },
+    {
+      "id": "txn-043",
+      "studentId": "E2023-22334",
+      "date": "2024-12-20T13:20:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar",
+      "amount": -4500,
+      "balanceAfter": 39300,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-042"
+    },
+    {
+      "id": "txn-044",
+      "studentId": "E2024-44556",
+      "date": "2024-12-20T12:10:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 2x Hamburguesa Completa, 1x Papas Fritas",
+      "amount": -10600,
+      "balanceAfter": 71700,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-043"
+    },
+    {
+      "id": "txn-045",
+      "studentId": "E2024-66778",
+      "date": "2024-12-19T17:40:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 2x Empanada de Pino, 1x Jugo Natural",
+      "amount": -6500,
+      "balanceAfter": 44400,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-044"
+    },
+    {
+      "id": "txn-046",
+      "studentId": "E2021-12345",
+      "date": "2024-12-19T16:25:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Pasta Bolognesa, 1x Ensalada Caesar",
+      "amount": -10000,
+      "balanceAfter": 46450,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-045"
+    },
+    {
+      "id": "txn-047",
+      "studentId": "E2021-67890",
+      "date": "2024-12-19T15:50:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Hamburguesa Completa, 2x Bebida 500ml",
+      "amount": -7800,
+      "balanceAfter": 88300,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-046"
+    },
+    {
+      "id": "txn-048",
+      "studentId": "E2022-33445",
+      "date": "2024-12-19T14:15:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 3x Café Americano",
+      "amount": -4500,
+      "balanceAfter": 59400,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-047"
+    },
+    {
+      "id": "txn-049",
+      "studentId": "E2022-55667",
+      "date": "2024-12-19T13:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar, 1x Agua Mineral",
+      "amount": -5700,
+      "balanceAfter": 76500,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-048"
+    },
+    {
+      "id": "txn-050",
+      "studentId": "E2023-77889",
+      "date": "2024-12-18T18:45:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Hamburguesa Completa, 1x Papas Fritas, 1x Bebida 500ml",
+      "amount": -8400,
+      "balanceAfter": 50300,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-049"
+    },
+    {
+      "id": "txn-051",
+      "studentId": "E2021-12345",
+      "date": "2024-12-18T17:30:00Z",
+      "type": "purchase",
+      "description": "Compra grupal en Restaurante El Jardín: 5x Pasta Bolognesa, 3x Ensalada Caesar",
+      "amount": -41000,
+      "balanceAfter": 56450,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-050"
+    },
+    {
+      "id": "txn-052",
+      "studentId": "E2021-67890",
+      "date": "2024-12-17T19:15:00Z",
+      "type": "purchase",
+      "description": "Evento especial en Comida Rápida UDD: 8x Hamburguesa Completa, 6x Papas Fritas",
+      "amount": -46800,
+      "balanceAfter": 96100,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-051"
+    },
+    {
+      "id": "txn-053",
+      "studentId": "E2022-33445",
+      "date": "2024-12-17T14:20:00Z",
+      "type": "purchase",
+      "description": "Catering de reunión en Cafetería Central: 15x Sandwich Italiano, 10x Café Americano",
+      "amount": -67500,
+      "balanceAfter": 63900,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-052"
+    },
+    {
+      "id": "txn-054",
+      "studentId": "E2022-55667",
+      "date": "2024-12-16T16:45:00Z",
+      "type": "purchase",
+      "description": "Almuerzo de trabajo en Restaurante El Jardín: 6x Ensalada Caesar, 4x Pasta Bolognesa",
+      "amount": -49000,
+      "balanceAfter": 82200,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-053"
+    },
+    {
+      "id": "txn-055",
+      "studentId": "E2023-77889",
+      "date": "2024-12-16T13:30:00Z",
+      "type": "purchase",
+      "description": "Pedido masivo en Comida Rápida UDD: 10x Hamburguesa Completa, 8x Papas Fritas",
+      "amount": -59600,
+      "balanceAfter": 58700,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-054"
+    },
+    {
+      "id": "txn-056",
+      "studentId": "E2023-99001",
+      "date": "2024-12-15T18:20:00Z",
+      "type": "purchase",
+      "description": "Celebración en Cafetería Central: 20x Empanada de Pino, 12x Jugo Natural",
+      "amount": -70000,
+      "balanceAfter": 50700,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-055"
+    },
+    {
+      "id": "txn-057",
+      "studentId": "E2023-22334",
+      "date": "2024-12-15T15:10:00Z",
+      "type": "purchase",
+      "description": "Evento de integración en Restaurante El Jardín: 8x Pasta Bolognesa, 6x Ensalada Caesar",
+      "amount": -71000,
+      "balanceAfter": 43800,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-056"
+    },
+    {
+      "id": "txn-058",
+      "studentId": "E2024-44556",
+      "date": "2024-12-14T17:40:00Z",
+      "type": "purchase",
+      "description": "Compra corporativa en Comida Rápida UDD: 12x Hamburguesa Completa, 10x Bebida 500ml",
+      "amount": -68400,
+      "balanceAfter": 82300,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-057"
+    },
+    {
+      "id": "txn-059",
+      "studentId": "E2024-66778",
+      "date": "2024-12-14T14:25:00Z",
+      "type": "purchase",
+      "description": "Pedido especial en Cafetería Central: 18x Café Americano, 12x Sandwich Italiano",
+      "amount": -69000,
+      "balanceAfter": 50900,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-058"
+    },
+    {
+      "id": "txn-060",
+      "studentId": "E2021-12345",
+      "date": "2024-12-13T16:30:00Z",
+      "type": "purchase",
+      "description": "Gran pedido en Restaurante El Jardín: 10x Ensalada Caesar, 8x Pasta Bolognesa",
+      "amount": -89000,
+      "balanceAfter": 97450,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-059"
+    },
+    {
+      "id": "txn-061",
+      "studentId": "E2022-33445",
+      "date": "2024-12-27T12:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Café Americano, 1x Sandwich Italiano",
+      "amount": -5000,
+      "balanceAfter": 28500,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-060"
+    },
+    {
+      "id": "txn-062",
+      "studentId": "E2022-55667",
+      "date": "2024-12-27T14:20:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar, 1x Agua Mineral",
+      "amount": -5700,
+      "balanceAfter": 32100,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-061"
+    },
+    {
+      "id": "txn-063",
+      "studentId": "E2023-77889",
+      "date": "2024-12-27T15:45:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Hamburguesa Completa, 1x Papas Fritas",
+      "amount": -6400,
+      "balanceAfter": 19800,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-062"
+    },
+    {
+      "id": "txn-064",
+      "studentId": "E2023-99001",
+      "date": "2024-12-27T16:10:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 2x Empanada de Pino, 1x Jugo Natural",
+      "amount": -6500,
+      "balanceAfter": 25700,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-063"
+    },
+    {
+      "id": "txn-065",
+      "studentId": "E2024-44556",
+      "date": "2024-12-27T17:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Pasta Bolognesa",
+      "amount": -5500,
+      "balanceAfter": 37500,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-064"
+    },
+    {
+      "id": "txn-066",
+      "studentId": "E2024-66778",
+      "date": "2024-12-27T18:15:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Hamburguesa Completa, 1x Bebida 500ml",
+      "amount": -6000,
+      "balanceAfter": 21400,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-065"
+    },
+    {
+      "id": "txn-067",
+      "studentId": "E2021-12345",
+      "date": "2024-12-28T11:45:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Café Americano, 1x Empanada de Pino",
+      "amount": -3500,
+      "balanceAfter": 15750,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-066"
+    },
+    {
+      "id": "txn-068",
+      "studentId": "E2021-67890",
+      "date": "2024-12-28T13:20:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar, 1x Pasta Bolognesa",
+      "amount": -10000,
+      "balanceAfter": 42300,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2024-067"
+    },
+    {
+      "id": "txn-069",
+      "studentId": "E2022-33445",
+      "date": "2024-12-28T14:50:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 2x Hamburguesa Completa",
+      "amount": -8400,
+      "balanceAfter": 28500,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2024-068"
+    },
+    {
+      "id": "txn-070",
+      "studentId": "E2022-55667",
+      "date": "2024-12-28T16:25:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Sandwich Italiano, 1x Jugo Natural",
+      "amount": -6000,
+      "balanceAfter": 32100,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2024-069"
+    },
+    {
+      "id": "txn-071",
+      "studentId": "E2023-77889",
+      "date": "2025-01-26T12:30:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Café Americano, 1x Empanada de Pino",
+      "amount": -3500,
+      "balanceAfter": 19800,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2025-071"
+    },
+    {
+      "id": "txn-072",
+      "studentId": "E2023-99001",
+      "date": "2025-01-26T14:15:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Pasta Bolognesa",
+      "amount": -5500,
+      "balanceAfter": 25700,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2025-072"
+    },
+    {
+      "id": "txn-073",
+      "studentId": "E2024-44556",
+      "date": "2025-01-27T11:45:00Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Hamburguesa Completa, 1x Bebida 500ml",
+      "amount": -6000,
+      "balanceAfter": 37500,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-2025-073"
+    },
+    {
+      "id": "txn-074",
+      "studentId": "E2024-66778",
+      "date": "2025-01-27T13:20:00Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Sandwich Italiano, 1x Jugo Natural",
+      "amount": -6000,
+      "balanceAfter": 21400,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-2025-074"
+    },
+    {
+      "id": "txn-075",
+      "studentId": "E2021-12345",
+      "date": "2025-01-28T12:10:00Z",
+      "type": "purchase",
+      "description": "Compra en Restaurante El Jardín: 1x Ensalada Caesar, 1x Agua Mineral",
+      "amount": -5700,
+      "balanceAfter": 15750,
+      "vendor": "Restaurante El Jardín",
+      "orderId": "ORD-2025-075"
+    },
+    {
+      "id": "txn-1756272199276",
+      "studentId": "E2021-12345",
+      "date": "2025-08-27T05:23:19.276Z",
+      "type": "adjustment",
+      "description": "Recarga de saldo: Ajuste manual desde admin panel",
+      "amount": 5000,
+      "balanceAfter": 30750,
+      "reason": "Ajuste manual desde admin panel"
+    },
+    {
+      "id": "txn-1756272218792",
+      "studentId": "E2021-12345",
+      "date": "2025-08-27T05:23:38.792Z",
+      "type": "adjustment",
+      "description": "Descuento de saldo: Ajuste manual desde admin panel",
+      "amount": -15000,
+      "balanceAfter": 15750,
+      "reason": "Ajuste manual desde admin panel"
+    },
+    {
+      "id": "txn-1756274931560",
+      "studentId": "E2021-12345",
+      "date": "2025-08-27T06:08:51.560Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Café Americano",
+      "amount": -1500,
+      "balanceAfter": 14250,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-1756274931532"
+    },
+    {
+      "id": "txn-1756274950377",
+      "studentId": "E2021-67890",
+      "date": "2025-08-27T06:09:10.377Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 3x Café Americano",
+      "amount": -4500,
+      "balanceAfter": 37800,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-1756274950338"
+    },
+    {
+      "id": "txn-1756274972973",
+      "studentId": "E2021-12345",
+      "date": "2025-08-27T06:09:32.973Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería Central: 1x Café Americano",
+      "amount": -1500,
+      "balanceAfter": 12750,
+      "vendor": "Cafetería Central",
+      "orderId": "ORD-1756274972952"
+    },
+    {
+      "id": "txn-1756274991981",
+      "studentId": "E2021-12345",
+      "date": "2025-08-27T06:09:51.981Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 2x Papas Fritas",
+      "amount": -4400,
+      "balanceAfter": 8350,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-1756274991954"
+    },
+    {
+      "id": "txn-1756275011011",
+      "studentId": "E2021-12345",
+      "date": "2025-08-27T06:10:11.011Z",
+      "type": "purchase",
+      "description": "Compra en Comida Rápida UDD: 1x Bebida 500ml",
+      "amount": -1800,
+      "balanceAfter": 6550,
+      "vendor": "Comida Rápida UDD",
+      "orderId": "ORD-1756275010986"
+    },
+    {
+      "id": "txn-1756276189608",
+      "studentId": "E2021-12345",
+      "date": "2025-08-27T06:29:49.608Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería UDD: 2x Latte Grande",
+      "amount": -5800,
+      "balanceAfter": 750,
+      "vendor": "Cafetería UDD",
+      "orderId": "TAP-2025-1756276189577"
+    },
+    {
+      "id": "txn-1756276213004",
+      "studentId": "E2021-12345",
+      "date": "2025-08-27T06:30:13.004Z",
+      "type": "adjustment",
+      "description": "Recarga de saldo: Ajuste manual desde admin panel",
+      "amount": 10000,
+      "balanceAfter": 10750,
+      "reason": "Ajuste manual desde admin panel"
+    },
+    {
+      "id": "txn-1756276335856",
+      "studentId": "E2021-12345",
+      "date": "2025-08-27T06:32:15.856Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería UDD: 1x Croissant Almendras",
+      "amount": -3200,
+      "balanceAfter": 7550,
+      "vendor": "Cafetería UDD",
+      "orderId": "TAP-2025-1756276335832"
+    },
+    {
+      "id": "txn-1756276436225",
+      "studentId": "E2021-12345",
+      "date": "2025-08-27T06:33:56.225Z",
+      "type": "purchase",
+      "description": "Compra en Cafetería UDD: 2x Croissant Almendras",
+      "amount": -6400,
+      "balanceAfter": 1150,
+      "vendor": "Cafetería UDD",
+      "orderId": "TAP-2025-1756276436205"
+    }
+  ],
+  "batches": [
+    {
+      "id": 1,
+      "name": "Becas Enero 2025",
+      "status": "pending",
+      "uploadDate": "2025-01-10",
+      "studentsCount": 150,
+      "totalAmount": 3750000,
+      "approvedBy": null,
+      "processedDate": null
+    },
+    {
+      "id": 2,
+      "name": "Becas Diciembre 2024",
+      "status": "approved",
+      "uploadDate": "2024-12-01",
+      "studentsCount": 145,
+      "totalAmount": 3625000,
+      "approvedBy": "Admin Principal",
+      "processedDate": "2024-12-02"
+    }
+  ],
+  "students": [
+    {
+      "id": "E2021-12345",
+      "rut": "12.345.678-9",
+      "name": "María González Pérez",
+      "email": "maria.gonzalez@udd.cl",
+      "password": "123456",
+      "career": "Ingeniería Comercial",
+      "campus": "Santiago"
+    },
+    {
+      "id": "E2021-67890",
+      "rut": "23.456.789-0",
+      "name": "Carlos Rodríguez Silva",
+      "email": "carlos.rodriguez@udd.cl",
+      "password": "123456",
+      "career": "Ingeniería Civil Industrial",
+      "campus": "Santiago"
+    },
+    {
+      "id": "E2021-11111",
+      "rut": "34.567.890-1",
+      "name": "Ana Martínez López",
+      "email": "ana.martinez@udd.cl",
+      "password": "123456",
+      "career": "Psicología",
+      "campus": "Concepción"
+    },
+    {
+      "id": "E2022-33445",
+      "rut": "45.678.901-2",
+      "name": "Diego Fernández Castro",
+      "email": "diego.fernandez@udd.cl",
+      "password": "123456",
+      "career": "Medicina",
+      "campus": "Santiago"
+    },
+    {
+      "id": "E2022-55667",
+      "rut": "56.789.012-3",
+      "name": "Valentina Torres Mendoza",
+      "email": "valentina.torres@udd.cl",
+      "password": "123456",
+      "career": "Arquitectura",
+      "campus": "Concepción"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-2024-001",
+      "studentId": "E2021-12345",
+      "vendorName": "Café Central",
+      "items": [
+        {
+          "id": "ITEM-001",
+          "name": "Latte",
+          "price": 3500,
+          "quantity": 1
+        },
+        {
+          "id": "ITEM-002",
+          "name": "Sandwich Italiano",
+          "price": 4500,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 8000,
+      "status": "collected",
+      "estimatedTime": 15,
+      "orderDate": "2024-12-28T10:30:00Z",
+      "readyDate": "2024-12-28T10:45:00Z",
+      "collectedDate": "2024-12-28T10:50:00Z"
+    },
+    {
+      "id": "ORD-2025-002",
+      "studentId": "E2021-67890",
+      "vendorName": "Burger House",
+      "items": [
+        {
+          "id": "ITEM-010",
+          "name": "Hamburguesa Clásica",
+          "price": 6500,
+          "quantity": 1
+        },
+        {
+          "id": "ITEM-011",
+          "name": "Papas Fritas",
+          "price": 2500,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 9000,
+      "status": "ready",
+      "estimatedTime": 20,
+      "orderDate": "2025-01-27T12:15:00Z",
+      "readyDate": "2025-01-27T12:35:00Z"
+    },
+    {
+      "id": "TAP-2025-1756276189577",
+      "studentId": "E2021-12345",
+      "vendorName": "Cafetería UDD",
+      "items": [
+        {
+          "id": "101",
+          "name": "Latte Grande",
+          "price": 2900,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 5800,
+      "status": "ready",
+      "estimatedTime": 20,
+      "orderDate": "2025-08-27T06:29:49.628Z",
+      "readyDate": "2025-08-27T06:30:20.380Z"
+    },
+    {
+      "id": "TAP-2025-1756276335832",
+      "studentId": "E2021-12345",
+      "vendorName": "Cafetería UDD",
+      "items": [
+        {
+          "id": "102",
+          "name": "Croissant Almendras",
+          "price": 3200,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 3200,
+      "status": "ready",
+      "estimatedTime": 14,
+      "orderDate": "2025-08-27T06:32:15.874Z",
+      "readyDate": "2025-08-27T06:32:45.910Z"
+    },
+    {
+      "id": "TAP-2025-1756276436205",
+      "studentId": "E2021-12345",
+      "vendorName": "Cafetería UDD",
+      "items": [
+        {
+          "id": "102",
+          "name": "Croissant Almendras",
+          "price": 3200,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 6400,
+      "status": "ready",
+      "estimatedTime": 15,
+      "orderDate": "2025-08-27T06:33:56.238Z",
+      "readyDate": "2025-08-27T06:34:26.261Z"
+    }
+  ]
+}
