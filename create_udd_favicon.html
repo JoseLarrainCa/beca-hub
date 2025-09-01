@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UDD Favicon Generator</title>
+    <style>
+        canvas { border: 1px solid #ccc; margin: 20px; }
+        body { font-family: Arial, sans-serif; padding: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Generador de Favicon UDD</h2>
+    <canvas id="favicon" width="64" height="64"></canvas>
+    <br>
+    <button onclick="downloadFavicon()">Descargar Favicon</button>
+    
+    <script>
+        const canvas = document.getElementById('favicon');
+        const ctx = canvas.getContext('2d');
+        
+        // Fondo azul UDD
+        ctx.fillStyle = '#1e3a8a';
+        ctx.fillRect(0, 0, 64, 64);
+        
+        // Texto UDD en blanco
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 18px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('UDD', 32, 32);
+        
+        function downloadFavicon() {
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'favicon.ico';
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+        }
+    </script>
+</body>
+</html>
