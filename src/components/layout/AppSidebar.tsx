@@ -24,8 +24,16 @@ import {
 } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: string;
+}
+
 interface AppSidebarProps {
   onLogout: () => void;
+  currentUser: User;
 }
 
 const navigationItems = [
@@ -70,7 +78,7 @@ const demoItems = [
   },
 ];
 
-export function AppSidebar({ onLogout }: AppSidebarProps) {
+export function AppSidebar({ onLogout, currentUser }: AppSidebarProps) {
   const { state } = useSidebar();
   const location = useLocation();
   const currentPath = location.pathname;
@@ -180,15 +188,15 @@ export function AppSidebar({ onLogout }: AppSidebarProps) {
               <div className="flex items-center space-x-3 px-3 py-2 mb-2">
                 <div className="h-8 w-8 rounded-full bg-sidebar-accent flex items-center justify-center">
                   <span className="text-sm font-medium text-sidebar-foreground">
-                    AD
+                    {currentUser.name.split(' ').map(n => n[0]).join('').toUpperCase()}
                   </span>
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-sidebar-foreground truncate">
-                    Admin Usuario
+                    {currentUser.name}
                   </p>
                   <p className="text-xs text-sidebar-foreground/70 truncate">
-                    admin@universidad.cl
+                    {currentUser.email}
                   </p>
                 </div>
               </div>

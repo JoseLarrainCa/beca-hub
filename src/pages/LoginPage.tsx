@@ -4,22 +4,48 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { GraduationCap, Shield, User } from 'lucide-react';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { GraduationCap, Shield, User, AlertCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface LoginPageProps {
-  onLogin: (role: 'admin' | 'student') => void;
+  onLogin: (email: string, password: string) => boolean;
 }
 
 export default function LoginPage({ onLogin }: LoginPageProps) {
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [adminEmail, setAdminEmail] = useState('invitado@udd.cl');
+  const [adminPassword, setAdminPassword] = useState('invitado-udd');
+  const [studentEmail, setStudentEmail] = useState('maria.gonzalez@universidad.cl');
+  const [studentPassword, setStudentPassword] = useState('demo123');
+  const navigate = useNavigate();
 
-  const handleLogin = async (role: 'admin' | 'student') => {
+  const handleAdminLogin = async () => {
     setIsLoading(true);
-    // Simulate API call
+    setError('');
+    
+    // Simulate API delay
     setTimeout(() => {
+      const success = onLogin(adminEmail, adminPassword);
+      if (success) {
+        navigate('/admin');
+      } else {
+        setError('Credenciales inválidas. Verifica tu email y contraseña.');
+      }
       setIsLoading(false);
-      onLogin(role);
-    }, 1500);
+    }, 500);
+  };
+
+  const handleStudentLogin = async () => {
+    setIsLoading(true);
+    setError('');
+    
+    // For student login, just redirect to student dashboard
+    setTimeout(() => {
+      navigate('/student');
+      setIsLoading(false);
+    }, 500);
   };
 
   return (
@@ -47,44 +73,24 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Tabs defaultValue="student" className="w-full">
+            {error && (
+              <Alert variant="destructive" className="mb-4">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
+
+            <Tabs defaultValue="admin" className="w-full">
               <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="student" className="flex items-center space-x-2">
-                  <User className="h-4 w-4" />
-                  <span>Estudiante</span>
-                </TabsTrigger>
                 <TabsTrigger value="admin" className="flex items-center space-x-2">
                   <Shield className="h-4 w-4" />
                   <span>Admin</span>
                 </TabsTrigger>
+                <TabsTrigger value="student" className="flex items-center space-x-2">
+                  <User className="h-4 w-4" />
+                  <span>Estudiante</span>
+                </TabsTrigger>
               </TabsList>
-
-              <TabsContent value="student" className="space-y-4 mt-6">
-                <div className="space-y-2">
-                  <Label htmlFor="student-email">Email o RUT</Label>
-                  <Input
-                    id="student-email"
-                    placeholder="tu.email@universidad.cl"
-                    type="email"
-                    defaultValue="maria.gonzalez@universidad.cl"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="student-password">Contraseña</Label>
-                  <Input
-                    id="student-password"
-                    type="password"
-                    defaultValue="demo123"
-                  />
-                </div>
-                <Button
-                  className="w-full bg-gradient-primary shadow-md"
-                  onClick={() => handleLogin('student')}
-                  disabled={isLoading}
-                >
-                  {isLoading ? 'Ingresando...' : 'Ingresar como Estudiante'}
-                </Button>
-              </TabsContent>
 
               <TabsContent value="admin" className="space-y-4 mt-6">
                 <div className="space-y-2">
@@ -93,7 +99,8 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
                     id="admin-email"
                     placeholder="admin@universidad.cl"
                     type="email"
-                    defaultValue="admin@universidad.cl"
+                    value={adminEmail}
+                    onChange={(e) => setAdminEmail(e.target.value)}
                   />
                 </div>
                 <div className="space-y-2">
@@ -101,32 +108,69 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
                   <Input
                     id="admin-password"
                     type="password"
-                    defaultValue="admin123"
+                    value={adminPassword}
+                    onChange={(e) => setAdminPassword(e.target.value)}
                   />
                 </div>
                 <Button
                   className="w-full bg-gradient-accent shadow-md"
-                  onClick={() => handleLogin('admin')}
+                  onClick={handleAdminLogin}
                   disabled={isLoading}
                 >
                   {isLoading ? 'Ingresando...' : 'Ingresar como Admin'}
                 </Button>
               </TabsContent>
+
+              <TabsContent value="student" className="space-y-4 mt-6">
+                <div className="space-y-2">
+                  <Label htmlFor="student-email">Email o RUT</Label>
+                  <Input
+                    id="student-email"
+                    placeholder="tu.email@universidad.cl"
+                    type="email"
+                    value={studentEmail}
+                    onChange={(e) => setStudentEmail(e.target.value)}
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="student-password">Contraseña</Label>
+                  <Input
+                    id="student-password"
+                    type="password"
+                    value={studentPassword}
+                    onChange={(e) => setStudentPassword(e.target.value)}
+                  />
+                </div>
+                <Button
+                  className="w-full bg-gradient-primary shadow-md"
+                  onClick={handleStudentLogin}
+                  disabled={isLoading}
+                >
+                  {isLoading ? 'Ingresando...' : 'Ingresar como Estudiante'}
+                </Button>
+              </TabsContent>
             </Tabs>
 
             {/* Demo credentials */}
-            <div className="mt-6 p-3 bg-muted/50 rounded-lg border border-border/50">
-              <p className="text-xs text-muted-foreground text-center font-medium mb-2">
-                Credenciales de Demo:
+            <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+              <p className="text-sm font-semibold text-blue-900 text-center mb-3">
+                🎯 Usuarios de Demostración
               </p>
-              <div className="text-xs text-muted-foreground space-y-1">
-                <div className="flex justify-between">
-                  <span>Estudiante:</span>
-                  <span>maria.gonzalez@universidad.cl / demo123</span>
+              <div className="space-y-3 text-sm">
+                <div className="p-3 bg-white rounded border border-blue-100">
+                  <div className="font-medium text-blue-900 mb-1">👤 Usuario Invitado (Recomendado)</div>
+                  <div className="text-xs text-blue-700 space-y-1">
+                    <div><strong>Email:</strong> invitado@udd.cl</div>
+                    <div><strong>Contraseña:</strong> invitado-udd</div>
+                    <div className="text-blue-600 mt-1">✅ Acceso completo al dashboard admin</div>
+                  </div>
                 </div>
-                <div className="flex justify-between">
-                  <span>Admin:</span>
-                  <span>admin@universidad.cl / admin123</span>
+                <div className="p-3 bg-white rounded border border-blue-100">
+                  <div className="font-medium text-blue-900 mb-1">⚙️ Admin Principal</div>
+                  <div className="text-xs text-blue-700 space-y-1">
+                    <div><strong>Email:</strong> admin@udd.cl</div>
+                    <div><strong>Contraseña:</strong> admin123</div>
+                  </div>
                 </div>
               </div>
             </div>

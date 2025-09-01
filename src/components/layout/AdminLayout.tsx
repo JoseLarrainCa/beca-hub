@@ -4,11 +4,19 @@ import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/layout/AppSidebar';
 import { Header } from '@/components/layout/Header';
 
-interface AdminLayoutProps {
-  onLogout: () => void;
+interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: string;
 }
 
-export default function AdminLayout({ onLogout }: AdminLayoutProps) {
+interface AdminLayoutProps {
+  onLogout: () => void;
+  currentUser: User;
+}
+
+export default function AdminLayout({ onLogout, currentUser }: AdminLayoutProps) {
   const location = useLocation();
   
   const getPageInfo = (pathname: string) => {
@@ -72,7 +80,7 @@ export default function AdminLayout({ onLogout }: AdminLayoutProps) {
     <div className="udd-theme">
       <SidebarProvider>
         <div className="min-h-screen flex w-full bg-background">
-          <AppSidebar onLogout={onLogout} />
+          <AppSidebar onLogout={onLogout} currentUser={currentUser} />
           
           <div className="flex-1 flex flex-col min-w-0">
             {/* Header with trigger */}
